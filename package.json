@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha"
+    "test": "mocha",
+    "docker-build": "docker build -t opsera-demos/nodejs-express-api .",
+    "docker-run": "docker run -it --rm -p 3000:3000 opsera-demos/nodejs-express-api"
   },
   "author": "Derek Ross",
   "license": "MIT",
