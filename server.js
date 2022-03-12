@@ -7,8 +7,13 @@ let cYear = currentDate.getFullYear()
 let dateString = cMonth + '/' + cDay + '/' + cYear
 const CUSTOMER = process.env.CUSTOMER || 'Opsera'
 
-app.get('/helloWorld', function(req, res){
-   res.json({ msg: 'Hello World!', customer: CUSTOMER, date: dateString });
+app.get('/api/helloWorld', function(req, res){
+   res.json(
+       { 
+           msg: 'Hello World!', 
+           customer: CUSTOMER, 
+           date: dateString 
+        });
 });
 
 const PORT = process.env.PORT || 3000
