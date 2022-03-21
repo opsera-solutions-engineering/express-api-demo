@@ -1,4 +1,5 @@
 const express = require('express');
+const os = require('os');
 const app = express();
 let currentDate = new Date()
 let cDay = currentDate.getDate()
@@ -6,13 +7,15 @@ let cMonth = currentDate.getMonth() + 1
 let cYear = currentDate.getFullYear()
 let dateString = cMonth + '/' + cDay + '/' + cYear
 const CUSTOMER = process.env.CUSTOMER || 'Opsera'
+let host = os.hostname()
 
 app.get('/api/helloWorld', function(req, res){
    res.json(
        { 
            msg: 'Hello World!', 
            customer: CUSTOMER, 
-           date: dateString 
+           date: dateString,
+           hostname: host, 
         });
 });
 
