@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-api
+spec:
+  selector:
+    app: express-api
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: express-api
+  template:
+    metadata:
+      labels:
+        app: express-api
+    spec:
+      containers:
+        - name: app
+          image: 8083-nexus-sotjtgrs.solutions-demo.opsera.io/opsera-demo-nodejs-express-api:1
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
