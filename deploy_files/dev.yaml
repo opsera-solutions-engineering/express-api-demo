@@ -1,4 +1,13 @@
 apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyI4MDgzLW5leHVzLXNvdGp0Z3JzLnNvbHV0aW9ucy1kZW1vLm9wc2VyYS5pbyI6eyJ1c2VybmFtZSI6Im9wc2VyYS1zb2x1dGlvbnMtZW5naW5lZXJpbmciLCJwYXNzd29yZCI6IlNvbHV0aW9uc0VuZ2luZWVyRG9ja2VyUmVwbyIsImVtYWlsIjoibmF3YXpAb3BzZXJhLmlvIiwiYXV0aCI6ImIzQnpaWEpoTFhOdmJIVjBhVzl1Y3kxbGJtZHBibVZsY21sdVp6cFRiMngxZEdsdmJuTkZibWRwYm1WbGNrUnZZMnRsY2xKbGNHOD0ifX19
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: java-api-argocd-secret
+type: kubernetes.io/dockerconfigjson
+---
+apiVersion: v1
 kind: Service
 metadata:
   name: express-api
