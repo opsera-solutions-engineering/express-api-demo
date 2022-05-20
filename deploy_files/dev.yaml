@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: 8083-nexus-sotjtgrs.solutions-demo.opsera.io/opsera-demo-nodejs-express-api:1
+          image: 8082-nexus-sotjtgrs.solutions-demo.opsera.io/opsera-demo-nodejs-express-api:2
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
