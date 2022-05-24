@@ -4,7 +4,7 @@ data:
 kind: Secret
 metadata:
   creationTimestamp: null
-  name: express-api-argocd-secret
+  name: docker-nexus-secret
 type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: v1
