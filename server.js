@@ -10,7 +10,7 @@ let host = os.hostname()
 
 app.get('/api/helloWorld', function(req, res){
    res.json(
-       { 
+       {
            msg: 'Hello World!', 
            language: 'NodeJS', 
            date: dateString,
